@@ -1,15 +1,16 @@
+#define LED_PIN 2
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(115200);
   Serial.println("Hello, ESP32-S2!");
-  pinMode(LED_BUILTIN , OUTPUT);
+  pinMode(LED_PIN, OUTPUT);
 }
 
 void loop() {
-  digitalWrite(LED_BUILTIN, HIGH); // turn on LED
-  Serial.println("LED ON");
+  digitalWrite(LED_PIN, HIGH); // turn on LED
+  Serial.println("ON");
   delay(1000); // wait for 1 second
-  digitalWrite(LED_BUILTIN, LOW); // turn off LED
-  Serial.println("LED OFF");
+  digitalWrite(LED_PIN, LOW); // turn off LED
+  Serial.println("OFF");
   delay(1000); // wait for 1 second
 }
